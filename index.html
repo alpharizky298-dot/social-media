@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Aether Social</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        AETHER
+    </div>
+
+    <div id="userArea"></div>
+
+</header>
+
+
+<main>
+
+    <!-- AUTH -->
+
+    <section id="auth">
+
+        <div class="auth-box">
+
+            <h1>Aether Social</h1>
+
+            <p class="subtitle">
+                Connect with your world.
+            </p>
+
+
+            <!-- LOGIN -->
+
+            <div id="loginBox">
+
+                <h2>Login</h2>
+
+                <input
+                    id="loginUsername"
+                    placeholder="Username"
+                >
+
+                <input
+                    id="loginPassword"
+                    type="password"
+                    placeholder="Password"
+                >
+
+                <button onclick="login()">
+                    Login
+                </button>
+
+                <p>
+                    Belum punya akun?
+                    <span
+                        class="link"
+                        onclick="showRegister()"
+                    >
+                        Register
+                    </span>
+                </p>
+
+            </div>
+
+
+            <!-- REGISTER -->
+
+            <div
+                id="registerBox"
+                class="hidden"
+            >
+
+                <h2>Register</h2>
+
+                <input
+                    id="registerUsername"
+                    placeholder="Username"
+                >
+
+                <input
+                    id="registerEmail"
+                    type="email"
+                    placeholder="Email"
+                >
+
+                <input
+                    id="registerPassword"
+                    type="password"
+                    placeholder="Password"
+                >
+
+                <button onclick="register()">
+                    Buat Akun
+                </button>
+
+                <p>
+                    Sudah punya akun?
+                    <span
+                        class="link"
+                        onclick="showLogin()"
+                    >
+                        Login
+                    </span>
+                </p>
+
+            </div>
+
+            <div id="authMessage"></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SOCIAL -->
+
+    <section
+        id="social"
+        class="hidden"
+    >
+
+        <div class="layout">
+
+
+            <!-- LEFT -->
+
+            <aside>
+
+                <div class="profile-card">
+
+                    <div class="avatar">
+                        A
+                    </div>
+
+                    <h2 id="profileUsername">
+                        User
+                    </h2>
+
+                    <p id="profileEmail">
+                        email
+                    </p>
+
+                </div>
+
+            </aside>
+
+
+            <!-- FEED -->
+
+            <div class="feed">
+
+                <!-- CREATE POST -->
+
+                <div class="create-post">
+
+                    <textarea
+                        id="postContent"
+                        placeholder="Apa yang sedang kamu pikirkan?"
+                        maxlength="1000"
+                    ></textarea>
+
+                    <div class="post-footer">
+
+                        <span id="charCount">
+                            0 / 1000
+                        </span>
+
+                        <button onclick="createPost()">
+                            Post
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- POSTS -->
+
+                <div id="posts">
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT -->
+
+            <aside class="right">
+
+                <div class="info-card">
+
+                    <h3>
+                        Aether Social
+                    </h3>
+
+                    <p>
+                        Versi 1.0
+                    </p>
+
+                    <p>
+                        Built with Python + FastAPI + SQLite.
+                    </p>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="app.js"></script>
+
+</body>
+
+</html>

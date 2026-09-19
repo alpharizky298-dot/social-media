@@ -1,0 +1,367 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f4f7;
+    color: #222;
+}
+
+
+/* HEADER */
+
+header {
+    height: 60px;
+    background: white;
+    border-bottom: 1px solid #ddd;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 25px;
+
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+
+/* AUTH */
+
+#auth {
+    min-height: calc(100vh - 60px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-box {
+    width: 380px;
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.auth-box h1 {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.auth-box h2 {
+    margin-bottom: 15px;
+}
+
+input,
+textarea {
+    width: 100%;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    padding: 12px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    margin-bottom: 12px;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #777;
+}
+
+button {
+    border: none;
+
+    border-radius: 10px;
+
+    padding: 11px 18px;
+
+    background: #111;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.auth-box button {
+    width: 100%;
+}
+
+.auth-box p {
+    text-align: center;
+    margin-top: 15px;
+    color: #777;
+}
+
+.link {
+    color: #111;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/* SOCIAL */
+
+.layout {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        220px
+        minmax(400px, 650px)
+        220px;
+
+    gap: 20px;
+
+    padding: 25px;
+}
+
+
+/* PROFILE */
+
+.profile-card,
+.info-card,
+.create-post,
+.post {
+    background: white;
+
+    border-radius: 15px;
+
+    padding: 20px;
+
+    margin-bottom: 20px;
+
+    box-shadow:
+        0 3px 15px rgba(0, 0, 0, 0.04);
+}
+
+.avatar {
+    width: 70px;
+    height: 70px;
+
+    background: #111;
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 30px;
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+.profile-card p {
+    color: #777;
+    margin-top: 5px;
+}
+
+
+/* CREATE POST */
+
+.create-post textarea {
+    resize: vertical;
+
+    min-height: 100px;
+
+    border: none;
+
+    background: #f5f5f5;
+}
+
+.post-footer {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+#charCount {
+    color: #777;
+    font-size: 13px;
+}
+
+
+/* POST */
+
+.post-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 15px;
+}
+
+.small-avatar {
+    width: 40px;
+    height: 40px;
+
+    background: #111;
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+}
+
+.post-user {
+    font-weight: bold;
+}
+
+.post-date {
+    color: #888;
+    font-size: 12px;
+}
+
+.post-content {
+    line-height: 1.6;
+
+    margin-bottom: 15px;
+
+    white-space: pre-wrap;
+}
+
+.post-actions {
+    display: flex;
+
+    gap: 10px;
+
+    border-top: 1px solid #eee;
+
+    padding-top: 12px;
+}
+
+.action-btn {
+    background: #f1f1f1;
+
+    color: #333;
+
+    font-weight: normal;
+}
+
+
+/* COMMENTS */
+
+.comments {
+    margin-top: 15px;
+}
+
+.comment {
+    background: #f5f5f5;
+
+    padding: 10px;
+
+    border-radius: 10px;
+
+    margin-top: 8px;
+}
+
+.comment strong {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.comment-input {
+    display: flex;
+
+    gap: 8px;
+
+    margin-top: 12px;
+}
+
+.comment-input input {
+    margin: 0;
+}
+
+
+/* UTIL */
+
+.hidden {
+    display: none !important;
+}
+
+#authMessage {
+    margin-top: 15px;
+
+    text-align: center;
+
+    font-weight: bold;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+    .layout {
+        grid-template-columns: 1fr;
+        max-width: 650px;
+    }
+
+    aside {
+        display: none;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .layout {
+        padding: 10px;
+    }
+
+    .auth-box {
+        width: 90%;
+        padding: 25px;
+    }
+
+    header {
+        padding: 0 15px;
+    }
+
+}
